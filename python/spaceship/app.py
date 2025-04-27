@@ -14,7 +14,7 @@ def make_app(settings: Settings) -> FastAPI:
         version=settings.app_version,
     )
     app.state.settings = settings
-
+    print("Hello world")
     if settings.debug:
         app.mount('/static', StaticFiles(directory='build'), name='static')
 
